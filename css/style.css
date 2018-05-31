@@ -1,0 +1,313 @@
+/*Reset Shit*/
+html, body, div, span, applet, object, iframe,
+ h2, h3, h4, h5, h6, p, blockquote, pre,
+ abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul,
+fieldset, form, label, legend,
+caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, main {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* unvisited link */
+a:link, a:visited, a:active {
+    color: #d1d1d1;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: purple;
+    text-decoration: none;
+}
+
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 100%;
+  font-family: "Droid Serif", serif;
+  color: #7f8c97;
+  background-color:black;
+}
+
+
+img {
+  max-width: 160%;
+}
+
+h2 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+/* -------------------------------- 
+
+Background
+
+-------------------------------- */
+
+#content {
+    overflow-y: scroll;
+    overflow-x: hidden; 
+  height: 100vh;
+  /* top: 60px; */
+  position: relative;
+  background-color: #37e913;
+  background: url("../img/outlyer.jpg") no-repeat center 0% fixed;
+  background-size:contain;
+
+  /* background: url("../img/outlyer.jpg") no-repeat center 0% scroll; */
+  /* set scroll to fixed for hiding*/
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  -webkit-transition: background 1s linear;
+  -moz-transition: background 1s linear;
+  -o-transition: background 1s linear;
+  -ms-transition: background 0.5s linear;
+  transition: background 0.5s linear;
+  height: 100vh;
+}
+/* -------------------------------- 
+
+Logo
+
+-------------------------------- */
+#section1{
+    width: 100%;
+    height: 100%;
+
+}
+
+#section3{
+    width: 100%;
+    height: 100%;
+    background-color:black;
+    position: relative;
+}
+/* -------------------------------- 
+
+Logo
+
+-------------------------------- */
+#logo{
+    position: fixed;
+    top: 70%;
+    left: 35%;
+    width: 30%;
+    z-index: 1000;
+}
+
+/* -------------------------------- 
+
+Section Banner
+
+-------------------------------- */
+
+#top-banner {
+    position: fixed;
+    width: 100%;
+	top:0;
+	height: 70px;
+    z-index: 999;
+    background-color: black;
+    /* visibility: hidden; */
+    
+}
+.snap-on{
+    visibility: visible;
+}
+.snap-off{
+    visibility: hidden;
+}
+
+
+
+.flexitop{
+	width: 631px;
+	display: flex;
+	margin: auto;
+}
+
+.bandname {
+    position: relative;
+    width: 100px;
+	margin: auto;
+	color: white;
+	top: 20px;
+}
+.index-container{
+	color: white;
+	font-family: "Oswald";
+	font-size: 25px;
+	top:20px;
+	position: relative;
+	width:auto;
+	
+}
+.index-container > a{
+margin-right: 10px;
+}
+.index-container-left{
+float: left;
+}
+.index-container-right{
+float: right;	
+}
+.social-buttons{
+	position: relative;
+
+	margin: 10px;
+}
+#social-buttons-left{
+	float: left;
+	left: 0;
+}
+#social-buttons-right{
+	float: right;
+	right:0;
+}
+.social-buttons > a{
+	margin-left: 15px;
+}
+#sc:hover{
+color: #ff7700;
+}
+#mail:hover {
+  color: #B88A00;
+}
+
+#fb:hover {
+  color: #3b5998;
+}
+
+#yt:hover {
+  color: #cc181e;
+}
+
+.section-banner{
+	position: absolute;
+	top:0px;
+	height: 60px;
+	background-color: #201F1F ;
+	color: #bcbcbc;
+	width: 100%;
+/*	border-color: white;
+	border-width: 2px;
+	border-style: solid;*/
+}
+.section-title{
+	font-family: "Oswald";
+	text-align: center;
+	top: -8px;
+	position: relative;
+}
+
+
+/* -------------------------------- 
+
+Section Music
+
+-------------------------------- */
+#section2{
+    width: 100%;
+    height: 100%;
+    /* background-color: #76f85d6b; */
+    position: relative;
+}
+
+#music-box{
+    position: relative;
+    width: 100%;
+    background-color: #d3812a;
+    height: 40%;
+    top: 30%;
+
+}
+
+
+/* -------------------------------- 
+
+Section Who's Who
+
+-------------------------------- */
+#portraits-box{
+    position: relative;
+    width:100%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 10%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.portraits{
+	width: auto;
+	height: auto;
+	margin: 20px;
+}
+.portraits > img{
+	height: auto;
+	width: auto;
+	max-height: 30vh;
+	min-height: 100px;
+	max-width: 15vw;
+	min-width: 67px;
+}
+.portrait-text{
+	width: 220px;
+	float: right;
+	text-align: left;
+	font-family: "Open Sans", sans-serif;
+	padding-top: 10vh;
+	padding-left: 10px;
+}
+.name{
+	font-size: 19px;
+	font-weight: bolder;
+}

@@ -50,7 +50,7 @@ a:link, a:visited, a:active {
 
 /* mouse over link */
 a:hover {
-    color: purple;
+    color: #d3812a;
     text-decoration: none;
 }
 
@@ -97,11 +97,18 @@ Background
   height: 100vh;
   /* top: 60px; */
   position: relative;
-  background-color: #37e913;
-  background: url("../img/outlyer.jpg") no-repeat center 0% fixed;
-  background-size:contain;
+  
+  background-attachment: fixed;
+  background-clip: border-box;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url("file:///Users/lisa/Documents/Outlyer/img/outlyer.jpg");
+  background-origin: padding-box;
+  background-position: 50% 50%;
+  background-position-x: 50%;
+  background-position-y: 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
 
-  /* background: url("../img/outlyer.jpg") no-repeat center 0% scroll; */
   /* set scroll to fixed for hiding*/
   -webkit-background-size: contain;
   -moz-background-size: contain;
@@ -145,6 +152,7 @@ Logo
     top: 70%;
     left: 35%;
     width: 30%;
+    min-width: 150px;
     z-index: 1000;
 }
 
@@ -153,6 +161,11 @@ Logo
 Section Banner
 
 -------------------------------- */
+.active-sec {
+    color: #d3812a !important;
+    text-decoration: none;
+}
+
 
 #top-banner {
     position: fixed;
@@ -174,14 +187,16 @@ Section Banner
 
 
 .flexitop{
-	width: 631px;
+	width: 50%;
 	display: flex;
-	margin: auto;
+    /* margin: auto; */
+    left: 25%;
+    position: absolute;
 }
 
 .bandname {
     position: relative;
-    width: 100px;
+    width: 30%;
 	margin: auto;
 	color: white;
 	top: 20px;
@@ -196,7 +211,7 @@ Section Banner
 	
 }
 .index-container > a{
-margin-right: 10px;
+margin-right: 50px;
 }
 .index-container-left{
 float: left;
@@ -284,18 +299,20 @@ Section Who's Who
 #portraits-box{
     position: relative;
     width:100%;
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-top: 10%;
+    padding-left: 15%;
+    padding-right: 10%;
+    padding-top: 10%; 
 	display: flex;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 .portraits{
 	width: auto;
 	height: auto;
 	margin: 20px;
 }
-.portraits > img{
+.portraits > img {
 	height: auto;
 	width: auto;
 	max-height: 30vh;
@@ -303,15 +320,60 @@ Section Who's Who
 	max-width: 15vw;
 	min-width: 67px;
 }
+
+.portraits > a > img {
+	height: auto;
+	width: auto;
+	max-height: 30vh;
+	min-height: 100px;
+	max-width: 15vw;
+	min-width: 67px;
+}
+
+
 .portrait-text{
 	width: 220px;
 	float: right;
 	text-align: left;
 	font-family: "Open Sans", sans-serif;
 	padding-top: 10vh;
-	padding-left: 10px;
+	padding-left: 15px;
 }
 .name{
 	font-size: 19px;
 	font-weight: bolder;
+}
+
+/* -------------------------------- 
+
+RESPONSIZE DESIGN
+
+-------------------------------- */
+
+@media only screen and (orientation: portrait) {
+    #logo{
+        width: 50%;
+    }
+    .index-container{
+        font-size: 15px;
+        top:20px;
+        position: relative;
+        width:63px;
+        
+    }
+    .index-container > a{
+    margin-right: 0px;
+    }
+    .index-container-right{
+        float: right;	
+    }
+    .social-buttons{
+		margin:3px;
+        top: 20px;
+        font-size:70%;
+    }
+    .social-buttons > a {
+        margin-left: 5px;
+    }
+
 }

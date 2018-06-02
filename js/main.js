@@ -6,8 +6,11 @@ $(document).ready(function($){
     var last_st =  $('#content').scrollTop();
     var win_w = $(window).innerWidth();
     var win_h= $(window).innerHeight();
-
-    $l.css('width', (win_w*0.3)+"px");
+    var perc_w_size=0.3;
+    if (win_h>win_w){
+        perc_w_size=0.7;
+    }
+    $l.css('width', (win_w*perc_w_size)+"px");
     var _width = $("#logo").css("width");
     _width=parseFloat(_width.slice(0,-2))
     $l.css('left', ((win_w-_width)/2)+"px");
@@ -31,10 +34,29 @@ $(document).ready(function($){
     });
 
     $('#content').scroll(function(event) {
-        // console.log(_top)
-        // console.log("scroll "+last_st)
+         
         var st =  $('#content').scrollTop();
         var amount_scrolled=Math.abs(last_st-st);
+
+        console.log(st)
+        var st1=Math.abs($('#section1').offset().top)
+        var st2=Math.abs($('#section2').offset().top)
+        var st3=Math.abs($('#section3').offset().top)
+        if (st1==Math.min(st1,st2,st3)){
+            console.log('1 is active')
+            $('#s2-link').removeClass('active-sec')
+            $('#s3-link').removeClass('active-sec')
+        } else if(st2==Math.min(st1,st2,st3)){
+            console.log('2 is active')
+            $('#s2-link').addClass('active-sec')
+            $('#s3-link').removeClass('active-sec')
+        } else if(st3==Math.min(st1,st2,st3)){
+            console.log('3 is active')
+            $('#s3-link').addClass('active-sec')
+            $('#s2-link').removeClass('active-sec')
+        } 
+        
+
         // if(st>0 & st<max_scroll){
             // console.log("scroll "+st)
             if (st>last_st) {
@@ -83,6 +105,7 @@ function enableSmoothScrolling() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+
         if (target.length) {
           $('#content').animate({
             scrollTop: $('#content').scrollTop() + target.offset().top
@@ -101,7 +124,12 @@ function reset(){
     win_h= $(window).innerHeight();
     var $w = $(window);
     var $l = $('#logo');
-    $l.css('width', (win_w*0.3)+"px");
+    if (win_h>win_w){
+        perc_w_size=0.7;
+    }else{
+        perc_w_size=0.3;
+    }
+    $l.css('width', (win_w*perc_w_size)+"px");
     _width = $("#logo").css("width");
     _width=parseFloat(_width.slice(0,-2))
     $l.css('left', ((win_w-_width)/2)+"px");

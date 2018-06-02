@@ -1,4 +1,5 @@
 $(document).ready(function($){
+    enableSmoothScrolling();
     console.log("Document is ready")
     var $w = $(window);
     var $l = $('#logo');
@@ -7,19 +8,27 @@ $(document).ready(function($){
     var win_h= $(window).innerHeight();
 
     $l.css('width', (win_w*0.3)+"px");
+    var _width = $("#logo").css("width");
+    _width=parseFloat(_width.slice(0,-2))
     $l.css('left', ((win_w-_width)/2)+"px");
     $l.css('top', (win_h*0.7)+"px");    
-
-
     var _top = $("#logo").css("top");
-    var _width = $("#logo").css("width");
     _top=parseFloat(_top.slice(0,-2))
-    _width=parseFloat(_width.slice(0,-2))
+
+
     var orig_top= _top;
     var orig_width= _width;
     console.log(orig_top)
     console.log(last_st)
     var max_scroll=10000;
+
+    reset();
+
+    $( window ).resize(function() {
+
+        reset();
+
+    });
 
     $('#content').scroll(function(event) {
         // console.log(_top)
@@ -36,6 +45,7 @@ $(document).ready(function($){
             } else if (st<last_st & st<win_h-win_h*0.5) {
                 // console.log("logo move down")
                 $('#top-banner').addClass('snap-off').removeClass('snap-on');
+                $("#logo-link").attr("href", "#section2")
                 _top=_top+2*amount_scrolled;
                 // _top=orig_top+st*10;
                 _width=_width+1*amount_scrolled;
@@ -46,6 +56,7 @@ $(document).ready(function($){
                 max_scroll=st;
                 console.log("snap on")
                 $('#top-banner').removeClass('snap-off').addClass('snap-on');
+                $("#logo-link").attr("href", "#section1")
             }else if(_top>orig_top){
                 _top=orig_top;
             }
@@ -55,18 +66,51 @@ $(document).ready(function($){
                 _width=orig_width;
             }
             
-            
             $l.css('width', _width+"px");
             $l.css('left', ((win_w-_width)/2)+"px");
-            
             $l.css('top', _top+"px");    
             last_st=st;
         // }
         
     });
 
+
+
+
+
+function enableSmoothScrolling() {
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('#content').animate({
+            scrollTop: $('#content').scrollTop() + target.offset().top
+            // scrollTop: 2000
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  }
+  
+  
+function reset(){
+    $("#content").scrollTop(0);
+    win_w = $(window).innerWidth();
+    win_h= $(window).innerHeight();
+    var $w = $(window);
+    var $l = $('#logo');
+    $l.css('width', (win_w*0.3)+"px");
+    _width = $("#logo").css("width");
+    _width=parseFloat(_width.slice(0,-2))
+    $l.css('left', ((win_w-_width)/2)+"px");
+    $l.css('top', (win_h*0.7)+"px");    
+    _top = $("#logo").css("top");
+    _top=parseFloat(_top.slice(0,-2))
+    orig_top= _top;
+    orig_width= _width;
+    return false
+}
+
 });
-
-
-  
-  

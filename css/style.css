@@ -198,7 +198,8 @@ Section Banner
 }
 .index-container{
 	color: white;
-	font-family: "Oswald";
+    /* font-family: "Oswald"; */
+    font-family: 'Fjalla One', sans-serif;
 	font-size: 25px;
 	top:20px;
 	position: relative;
@@ -257,7 +258,8 @@ color: #ff7700;
 	border-style: solid;*/
 }
 .section-title{
-	font-family: "Oswald";
+    /* font-family: "Oswald"; */
+    font-family: 'Fjalla One', sans-serif;
 	text-align: center;
 	top: -8px;
 	position: relative;
@@ -289,12 +291,14 @@ Section Music
     height: 100%;
     left:15%;
     position: relative;
-    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 #info-title{
     color: black;
     font-size: 7vh;
     text-align: center;
+    font-family: 'Fjalla One', sans-serif;
+    padding-top: 5px;
 }
 .info-p{
     color: black;

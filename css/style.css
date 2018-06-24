@@ -314,7 +314,7 @@ Section Music
 .concert-date{
     color: #464343;;
     margin-top: 20px;
-    margin-left:100px;
+    margin-left:20%;
     font-size:2vh;
 }
 .past{
@@ -326,8 +326,8 @@ Section Music
 
 #SoundCloud-player{
     margin-top: 30px;
-    width:80%;
-    margin-left:10%;
+    width:60%;
+    margin-left:20%;
 }
 
 /* -------------------------------- 
@@ -407,31 +407,6 @@ RESPONSIZE DESIGN
 
 @media only screen and (orientation: portrait) {
 
-    /* Make top bar small */
-    #logo{
-        width: 50%;
-    }
-    .index-container{
-        font-size: 15px;
-        top:20px;
-        position: relative;
-        width:85px;
-        
-    }
-    .index-container > a{
-    margin-right: 0px;
-    }
-    .index-container-right{
-        float: right;	
-    }
-    .social-buttons{
-		margin:3px;
-        top: 20px;
-        font-size:70%;
-    }
-    .social-buttons > a {
-        margin-left: 5px;
-    }
 
     #portraits-box{
         padding-left: 3%;
@@ -471,12 +446,46 @@ RESPONSIZE DESIGN
 
     #SoundCloud-player{
         margin-top: 25px;
-        width:100%;
+        /* width:100%; */
+        /* margin-left */
+        height: 40%;
+    }
+
+}
+@media only screen and (orientation: portrait) and (max-width: 770px){
+    /* Make top bar small */
+    #logo{
+        width: 50%;
+    }
+    .index-container{
+        font-size: 20px;
+        top:20px;
+        position: relative;
+        width:115px;
+        
+    }
+    .index-container > a{
+    margin-right: 0px;
+    }
+    .index-container-right{
+        float: right;	
+    }
+    .social-buttons{
+		margin:3px;
+        top: 20px;
+        font-size:70%;
+    }
+    .social-buttons > a {
+        margin-left: 5px;
     }
 
 }
 
 @media only screen and (max-width: 440px) {
+    .index-container{
+        font-size: 15px;
+        width:90px;
+    }
     #info-title{
         font-size: 3vh;
         margin-bottom:10px;
@@ -504,7 +513,7 @@ RESPONSIZE DESIGN
     } */
 
     #SoundCloud-player{
-        height: 30%;
+        height: 42%;
         margin-top: 2vh;
     }
 
@@ -517,7 +526,7 @@ RESPONSIZE DESIGN
         width: 50%;
     }
     .index-container{
-        font-size: 15px;
+        font-size: 20px;
         top:20px;
         position: relative;
         width:85px;

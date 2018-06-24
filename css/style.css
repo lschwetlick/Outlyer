@@ -101,7 +101,7 @@ Background
   background-attachment: fixed;
   background-clip: border-box;
   background-color: rgba(0, 0, 0, 0);
-  background-image: url("file:///Users/lisa/Documents/Outlyer/img/outlyer.jpg");
+  background-image: url("../img/outlyer.jpg");
   background-origin: padding-box;
   background-position: 50% 50%;
   background-position-x: 50%;

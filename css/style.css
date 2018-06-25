@@ -129,7 +129,12 @@ Section
 .section{
     min-height: 1vh
 }
-
+#impressum-link{
+    position: absolute;
+    bottom:0px;
+    left:0px;
+    color: #7f8c97;
+}
 
 /* -------------------------------- 
 

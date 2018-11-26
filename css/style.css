@@ -50,7 +50,7 @@ a:link, a:visited, a:active {
 
 /* mouse over link */
 a:hover {
-    color: #d3812a;
+    color: #c06f34;
     text-decoration: none;
 }
 
@@ -162,7 +162,7 @@ Section Banner
 
 -------------------------------- */
 .active-sec {
-    color: #d3812a !important;
+    color: #c06f34 !important;
     text-decoration: none;
 }
 
@@ -286,7 +286,7 @@ Section Music
 #music-box{
     position: relative;
     width: 100%;
-    background-color: #d3812a;
+    background-color: #c06f34;
     height: 40%;
     top: 30%;
 }
@@ -321,11 +321,21 @@ Section Music
 }
 
 .concert-date{
-    color: #464343;;
+    color: #464343;
     margin-top: 20px;
     margin-left:20%;
     font-size:2vh;
 }
+
+.concert-date>a{
+    color: #8c8c8c;;
+}
+
+.concert-date>a:hover{
+    color: #352727;
+}
+
+
 .past{
     text-decoration: line-through;
 }

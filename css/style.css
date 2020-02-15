@@ -73,7 +73,7 @@ body {
   font-size: 100%;
   font-family: "Droid Serif", serif;
   color: #7f8c97;
-  background-color:black;
+  background-color:rgba(204, 191, 174, 1);;
 }
 
 
@@ -100,8 +100,8 @@ Background
   
   background-attachment: fixed;
   background-clip: border-box;
-  background-color: rgba(0, 0, 0, 0);
-  background-image: url("../img/outlyer.jpg");
+  background-color: rgba(204, 191, 174, 1);
+  background-image: url("../img/outlyer_outline.png");
   background-origin: padding-box;
   background-position: 50% 50%;
   background-position-x: 50%;
@@ -173,7 +173,7 @@ Section Banner
 	top:0;
 	height: 70px;
     z-index: 999;
-    background-color: black;
+    background-color: rgba(32, 28, 24, 0.77);
     /* visibility: hidden; */
     
 }
@@ -358,7 +358,7 @@ Section Who's Who
     width: 100%;
     height: auto;
     min-height:100%;
-    background-color:black;
+    background-color:rgb(32, 28, 24);
     position: relative;
 }
 
@@ -544,15 +544,16 @@ RESPONSIZE DESIGN
     #logo{
         width: 50%;
     }
-    .index-container{
+    /*.index-container{
         font-size: 20px;
         top:20px;
         position: relative;
         width:85px;
-        
+
     }
     .index-container > a{
-    margin-right: 0px;
+    margin-right: 20px;
+    padding-right: 50px;
     }
     .index-container-right{
         float: right;	
@@ -564,6 +565,6 @@ RESPONSIZE DESIGN
     }
     .social-buttons > a {
         margin-left: 5px;
-    }
+    } */
 
 }

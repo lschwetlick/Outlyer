@@ -371,7 +371,7 @@ Section Who's Who
     padding-top: 25vh; 
 	display: flex;
     flex-wrap: nowrap;
-    align-items: center;
+    align-items:  baseline;
     justify-content: center;
 }
 .portraits{

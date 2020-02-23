@@ -103,9 +103,9 @@ Background
   background-color: rgba(204, 191, 174, 1);
   background-image: url("../img/outlyer_outline.png");
   background-origin: padding-box;
-  background-position: 50% 50%;
+  /* background-position: 50% 50%; */
   background-position-x: 50%;
-  background-position-y: 50%;
+  background-position-y: 100%;
   background-repeat: no-repeat;
   background-size: contain;
 
@@ -153,6 +153,7 @@ Logo
     left: 35%;
     width: 30%;
     min-width: 150px;
+    /* max-width: 500px; */
     z-index: 1000;
 }
 
@@ -365,11 +366,11 @@ Section Who's Who
 #portraits-box{
     position: relative;
     width:100%;
-    padding-left: 15%;
-    padding-right: 10%;
-    padding-top: 10%; 
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 25vh; 
 	display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
 }
@@ -381,29 +382,29 @@ Section Who's Who
 .portraits > img {
 	height: auto;
 	width: auto;
-	max-height: 30vh;
+	max-height: 25vh;
 	min-height: 100px;
-	max-width: 30vw;
+	max-width: 25vw;
 	min-width: 100px;
 }
 
 .portraits > a > img {
 	height: auto;
 	width: auto;
-	max-height: 30vh;
+	max-height: 25vh;
 	min-height: 100px;
-	max-width: 30vw;
+	max-width: 25vw;
 	min-width: 100px;
 }
 
 
 .portrait-text{
 	width: 220px;
-	float: right;
+	/* float: right; */
 	text-align: left;
 	font-family: "Open Sans", sans-serif;
-	padding-top: 10vh;
-	padding-left: 15px;
+	padding-top: 2vh;
+	/* padding-left: 15px; */
 }
 .name{
 	font-size: 19px;
@@ -415,17 +416,23 @@ Section Who's Who
 RESPONSIZE DESIGN
 
 -------------------------------- */
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1365px) {
     #portraits-box{
         padding-left: 3%;
         padding-right: 3%;
-        padding-top: 10%; 
+        padding-top: 10%;
+        flex-wrap: wrap;
     }
 }
 
 
 @media only screen and (orientation: portrait) {
-
+    #logo{
+        position: fixed;
+        top: 30%;
+        left: 35%;
+        width: 30%;
+    }
 
     #portraits-box{
         padding-left: 3%;
@@ -438,9 +445,12 @@ RESPONSIZE DESIGN
     }
     .portrait-text{
         width: auto;
-        padding-top: 10vh;
-        padding-left: 15px;
-        font-size:95%
+        max-width: 50vw;
+        /* padding-top: 10vh; */
+        /* padding-left: 15px; */
+        text-align: right;
+        font-size: 95%;
+        float: right
     }
     .portraits{
         width:100%;
@@ -448,12 +458,11 @@ RESPONSIZE DESIGN
     .portraits>img{
         max-width: 15vh;
         max-height: 15vh;
-        
+
     }
     .portraits>a>img{
         max-width: 15vh;
         max-height: 15vh;
-        
     }
     .name{
         font-size:95%;
@@ -474,6 +483,7 @@ RESPONSIZE DESIGN
 @media only screen and (orientation: portrait) and (max-width: 770px){
     /* Make top bar small */
     #logo{
+        top: 30%;
         width: 50%;
     }
     .index-container{
@@ -481,13 +491,12 @@ RESPONSIZE DESIGN
         top:20px;
         position: relative;
         width:115px;
-        
     }
     .index-container > a{
     margin-right: 0px;
     }
     .index-container-right{
-        float: right;	
+        float: right;
     }
     .social-buttons{
 		margin:3px;
@@ -544,19 +553,19 @@ RESPONSIZE DESIGN
     #logo{
         width: 50%;
     }
-    /*.index-container{
+    .index-container{
         font-size: 20px;
         top:20px;
         position: relative;
-        width:85px;
-
     }
     .index-container > a{
-    margin-right: 20px;
-    padding-right: 50px;
+        margin-right: 20px;
     }
+
     .index-container-right{
-        float: right;	
+        /* font-size: 15px; */
+        float: right;
+        width: 120px;
     }
     .social-buttons{
 		margin:3px;
@@ -565,6 +574,41 @@ RESPONSIZE DESIGN
     }
     .social-buttons > a {
         margin-left: 5px;
-    } */
+    }
+    .portraits{
+        margin: 10px;
+        margin-top: 25px;
+    }
+
+    #portraits-box{
+        flex-wrap: nowrap;
+        align-items: baseline;
+    }
+    .portrait-text{
+        width: auto;
+        max-width: 100px;
+        /* max-width: 50vw; */
+        /* padding-top: 10vh; */
+        /* padding-left: 15px; */
+        /* text-align: right; */
+        font-size: 80%;
+        /* float: right */
+    }
+    .name{
+        font-size: 15px;
+    }
+
+
+@media only screen and (max-height: 600px) and (orientation: landscape){
+    .portraits{
+        margin: 20px;
+        margin-top: 10px;
+    }
+
+    #portraits-box{
+        flex-wrap: wrap;
+        align-items: baseline;
+    }
+}
 
 }

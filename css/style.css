@@ -244,6 +244,10 @@ color: #ff7700;
   color: rgb(74, 184, 0);
 }
 
+#insta:hover {
+  color: rgb(255, 149, 0);
+}
+
 #fb:hover {
   color: #3b5998;
 }

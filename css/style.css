@@ -1,3 +1,10 @@
+@font-face {
+  font-family: HeavyEquipment;
+  src: url('../fonts/HeavyEquipment.ttf') format('truetype');
+}
+
+
+
 /*Reset Shit*/
 html, body, div, span, applet, object, iframe,
  h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -72,6 +79,7 @@ html * {
 body {
   font-size: 100%;
   font-family: "Droid Serif", serif;
+  font-family: "HeavyEquipment";
   color: #7f8c97;
   background-color:rgba(204, 191, 174, 1);;
 }
@@ -83,6 +91,7 @@ img {
 
 h2 {
   font-family: "Open Sans", sans-serif;
+  font-family: "HeavyEquipment";
   font-weight: bold;
 }
 /* -------------------------------- 
@@ -206,6 +215,7 @@ Section Banner
 	color: white;
     /* font-family: "Oswald"; */
     font-family: 'Fjalla One', sans-serif;
+    font-family: "HeavyEquipment";
 	font-size: 25px;
 	top:20px;
 	position: relative;
@@ -270,6 +280,7 @@ color: #ff7700;
 .section-title{
     /* font-family: "Oswald"; */
     font-family: 'Fjalla One', sans-serif;
+    font-family: "HeavyEquipment";
 	text-align: center;
 	top: -8px;
 	position: relative;
@@ -302,12 +313,14 @@ Section Music
     left:15%;
     position: relative;
     font-family: 'Raleway', sans-serif;
+    font-family: 'HeavyEquipment';
 }
 #info-title{
     color: black;
     font-size: 7vh;
     text-align: center;
     font-family: 'Fjalla One', sans-serif;
+    font-family: 'HeavyEquipment';
     padding-top: 5px;
 }
 .info-p{
@@ -333,7 +346,8 @@ Section Music
 }
 
 .concert-date>a{
-    color: #8c8c8c;;
+    color: #795c36;
+    text-decoration: underline;
 }
 
 .concert-date>a:hover{
@@ -407,6 +421,7 @@ Section Who's Who
 	/* float: right; */
 	text-align: left;
 	font-family: "Open Sans", sans-serif;
+    font-family: 'HeavyEquipment';
 	padding-top: 2vh;
 	/* padding-left: 15px; */
 }

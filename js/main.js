@@ -45,19 +45,28 @@ $(document).ready(function ($) {
         console.log(st)
         var st1 = Math.abs($('#section1').offset().top)
         var st2 = Math.abs($('#section2').offset().top)
+        var st25 = Math.abs($('#section25').offset().top)
         var st3 = Math.abs($('#section3').offset().top)
-        if (st1 == Math.min(st1, st2, st3)) {
+        if (st1 == Math.min(st1, st2, st25, st3)) {
             console.log('1 is active')
             $('#s2-link').removeClass('active-sec')
+            $('#s25-link').removeClass('active-sec')
             $('#s3-link').removeClass('active-sec')
-        } else if (st2 == Math.min(st1, st2, st3)) {
+        } else if (st2 == Math.min(st1, st2, st25, st3)) {
             console.log('2 is active')
             $('#s2-link').addClass('active-sec')
+            $('#s25-link').removeClass('active-sec')
             $('#s3-link').removeClass('active-sec')
-        } else if (st3 == Math.min(st1, st2, st3)) {
+        } else if (st25 == Math.min(st1, st2, st25, st3)) {
+            console.log('25 is active')
+            $('#s2-link').removeClass('active-sec')
+            $('#s25-link').addClass('active-sec')
+            $('#s3-link').removeClass('active-sec')
+        } else if (st3 == Math.min(st1, st2, st25, st3)) {
             console.log('3 is active')
             $('#s3-link').addClass('active-sec')
             $('#s2-link').removeClass('active-sec')
+            $('#s25-link').removeClass('active-sec')
         }
 
 

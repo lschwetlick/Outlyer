@@ -253,7 +253,7 @@ Logo
     position: fixed;
     top: 70%;
     left: 35%;
-    width: 30%;
+    width: 40%;
     min-width: 150px;
     /* max-width: 500px; */
     z-index: 1000;
@@ -577,7 +577,7 @@ RESPONSIZE DESIGN
         position: fixed;
         top: 30%;
         left: 35%;
-        width: 30%;
+        width: 40%;
     }
 
     #portraits-box {
